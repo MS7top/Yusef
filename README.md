@@ -12,10 +12,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/MS7top/Yusef/refs/hea
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MS7top/Yusef/refs/heads/main/kidYusef.txt"))()
 ```
 
-# 3
+# 3 | تـخـريـب
 
 ```lua
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MS7top/Yusef/refs/heads/main/SabotageScript_Yusef.txt"))()
 ```
 
 # 4
